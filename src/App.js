@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// 총 5구역으로 나눠서 진행 예정
+// icebox, emergency, inprogress, test, trash
+
 function App() {
   return (
     <div className="App">
