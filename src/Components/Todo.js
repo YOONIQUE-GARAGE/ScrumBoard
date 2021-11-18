@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Todo = () => {
+const Todo = (props) => {
   // 한개의 todo 구성(todo + 버튼 2개)
   return(
   <li className="todo_container">
-    <div className="todo">여기에 하나의 투두가 뜹니다</div>
+    <div className="todo">{props.todo}</div>
     <button className="emergency_button">우선</button>
     <button className="next_button">다음단계로</button>
   </li>
