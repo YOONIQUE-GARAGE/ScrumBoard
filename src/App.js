@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './Header';
+import Footer from './Footer';
 import './App.css';
 import Todos from './Pages/Todos';
 
@@ -11,11 +12,13 @@ import Todos from './Pages/Todos';
 function App() {
   return (
     <div className="App">
+      <Header />
       <main>
         <section>
           <Todos />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

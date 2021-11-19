@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.css';
 // 시간, 날짜, 날씨 정보란
 
 const Header = () => {
