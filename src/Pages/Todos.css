@@ -1,3 +1,38 @@
 ul {
   list-style: none;
 }
+
+div {
+  text-align: center;
+}
+
+.w-23 {
+  width: 23%
+}
+
+.todoListForm_container {
+  border: solid 1px #ae8fe0;
+}
+.emergencyForm_container {
+  border: solid 1px #8a57dd;
+}
+.inprogressive_container {
+  border: solid 1px #5117ad;
+}
+.test_container {
+  border: solid 1px #3f01a1;
+}
+
+.todoForm_container {
+  border: solid 3px #66B2FF;
+  flex: 1 0 0;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.box_container {
+  border: solid 3px #00FFFF;
+  flex: 6 0 0;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,6 @@
+.todo_container {
+  display: flex;
+}
+li > div.todo {
+  display: inline-block;
+}
