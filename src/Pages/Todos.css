@@ -7,7 +7,7 @@ div {
 }
 
 .w-23 {
-  width: 23%
+  width: 23%;
 }
 
 .todoListForm_container {
@@ -24,15 +24,16 @@ div {
 }
 
 .todoForm_container {
-  border: solid 3px #66B2FF;
+  border: solid 3px #66b2ff;
   flex: 1 0 0;
   text-align: center;
   padding-top: 3%;
 }
 
 .box_container {
-  border: solid 3px #00FFFF;
+  border: solid 3px #00ffff;
   flex: 6 0 0;
   display: flex;
   justify-content: space-around;
+  padding: 20px;
 }

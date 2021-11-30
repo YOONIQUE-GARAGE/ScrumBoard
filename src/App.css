@@ -41,13 +41,9 @@ section {
   flex-direction: column;
 }
 
-
 footer {
-  flex: 0.2 1 0;
+  flex: 0.5 0 0;
   padding: 0.3rem;
   text-align: center;
   border: solid 2px springgreen;
 }
-
-
-
