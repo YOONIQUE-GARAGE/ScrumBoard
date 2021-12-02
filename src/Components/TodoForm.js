@@ -9,7 +9,12 @@ const TodoForm = ({ addtodo }) => {
   };
 
   // 버튼누르면 작동하는 함수 만들기
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    // state 끌어올리기
+    // 버튼클릭시 props로 받은 부모의 함수를 호출한다.(콜백함수개념)
+    // addtodos함수에서 todos에 추가가 일어난다.
+    addtodo(todoVal);
+  };
 
   return (
     <div className="todoFrom_wrapper">

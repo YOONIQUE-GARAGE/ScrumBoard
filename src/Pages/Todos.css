@@ -11,16 +11,20 @@ div {
 }
 
 .todoListForm_container {
-  border: solid 1px #ae8fe0;
+  background-color: #f2f2f2;
+  border-radius: 1em;
 }
 .emergencyForm_container {
-  border: solid 1px #8a57dd;
+  border-radius: 1em;
+  background-color: #d4b8ab;
 }
 .inprogressive_container {
-  border: solid 1px #5117ad;
+  border-radius: 1em;
+  background-color: #b9c2ac;
 }
 .test_container {
-  border: solid 1px #3f01a1;
+  border-radius: 1em;
+  background-color: #c8c9cb;
 }
 
 .todoForm_container {
