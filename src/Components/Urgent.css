@@ -1,0 +1,6 @@
+.urgent_container {
+  display: flex;
+}
+li > div.urgent {
+  display: inline-block;
+}

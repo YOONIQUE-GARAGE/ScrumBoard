@@ -1,0 +1,6 @@
+.ing_container {
+  display: flex;
+}
+li > div.ing {
+  display: inline-block;
+}
