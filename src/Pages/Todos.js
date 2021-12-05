@@ -24,14 +24,18 @@ const Todos = () => {
     setTodos(newTodo);
   };
   // todo -> ing 이동
-  const moveIng = (id) => {
-    setIngs(ings.concat(todos.filter((todo) => id === todo.id)));
-    delThings(id,'todo');
+  const moveNext = (id, branch) => {
+    if(branch === 'todo'){
+      setIngs(ings.concat(todos.filter((todo) => id === todo.id)));
+      delThings(id,'todo');
+    }else if(branch === 'ing'){
+      setTests(tests.concat(ings.filter((ing) => id === ing.id)));
+      delThings(id, 'ing');
+    }
   }
   // ing -> test 이동
   // 어느구역이든 -> Urgent 이동
   const moveUrgent = (id, branch) => {
-    
     switch(branch){
       case 'todo': setUrgents(urgents.concat(todos.filter((todo) => id === todo.id))); break;
       case 'ing': setUrgents(urgents.concat(ings.filter((ing) => id === ing.id))); break;
@@ -59,7 +63,7 @@ const Todos = () => {
           <div>여긴 투두칸</div>
           <ul className="todos">
             {/* todo와 버튼들을 map으로 하나씩 구성하기 */}
-            {todos.map((todo) => <Todo todo={todo} delFunc={delThings} ingFunc={moveIng} urgentFunc={moveUrgent} key={todo.id}/>)}
+            {todos.map((todo) => <Todo todo={todo} delFunc={delThings} ingFunc={moveNext} urgentFunc={moveUrgent} key={todo.id}/>)}
           </ul>
         </div>
         <div className="emergencyForm_container w-23">
@@ -68,13 +72,15 @@ const Todos = () => {
         </div>
         <div className="inprogressive_container w-23">
           <div>여긴 진행중 칸</div>
-            <ul className="ings">
-              {ings.map((ing) => <IngTodo ing={ing} delFunc={delThings} urgentFunc={moveUrgent} key={ing.id}/>)}
-            </ul>
+          <ul className="ings">
+            {ings.map((ing) => <IngTodo ing={ing} delFunc={delThings} testFunc={moveNext} urgentFunc={moveUrgent} key={ing.id}/>)}
+          </ul>
         </div>
         <div className="test_container w-23">
           <div>여긴 테스트칸</div>
-          
+          <ul className='tests'>
+            {tests.map((test) => <TestTodo test={test} />)}
+          </ul>
         </div>
       </div>
     </React.Fragment>

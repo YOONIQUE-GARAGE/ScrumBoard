@@ -1,5 +1,5 @@
-.urgent_container {
-  display: flex;
+ul {
+  list-style:none;
 }
 li > div.urgent {
   display: inline-block;

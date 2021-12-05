@@ -7,7 +7,7 @@ const Todo = ({todo = {}, delFunc, ingFunc, urgentFunc}) => {
   <li className="todo_container">
     <div className="todo">{text}</div>
     <button className="emergency_button" onClick={() => urgentFunc(id, 'todo')}>Urgent</button>
-    <button className="next_button" onClick={() => ingFunc(id)}>Next</button>
+    <button className="next_button" onClick={() => ingFunc(id, 'todo')}>Next</button>
     <button className="del_button" onClick={() => delFunc(id, 'todo')}>Del</button>
   </li>
   )
