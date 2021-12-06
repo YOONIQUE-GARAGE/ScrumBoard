@@ -55,22 +55,24 @@ const Todos = () => {
   
   return (
     <React.Fragment>
-      <div className="todoForm_container">
+      <div className="newTodoForm_container">
         <TodoForm addtodo={addTodos} />
       </div>
       <div className="box_container">
-        <div className="todoListForm_container w-23">
+        <div className="todoForm_container w-23">
           <div>여긴 투두칸</div>
           <ul className="todos">
             {/* todo와 버튼들을 map으로 하나씩 구성하기 */}
             {todos.map((todo) => <Todo todo={todo} delFunc={delThings} ingFunc={moveNext} urgentFunc={moveUrgent} key={todo.id}/>)}
           </ul>
         </div>
-        <div className="emergencyForm_container w-23">
+        <div className="urgentForm_container w-23">
           <div>여긴 긴급처리 칸</div> 
+          <ul className="urgents">
           {urgents.map((urgent) => <UrgentTodos urgent={urgent}/>)}
+          </ul>
         </div>
-        <div className="inprogressive_container w-23">
+        <div className="ingForm_container w-23">
           <div>여긴 진행중 칸</div>
           <ul className="ings">
             {ings.map((ing) => <IngTodo ing={ing} delFunc={delThings} testFunc={moveNext} urgentFunc={moveUrgent} key={ing.id}/>)}

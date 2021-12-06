@@ -1,5 +1,5 @@
 import React from 'react';
-import './Todo.css';
+import './Lists.css';
 const Todo = ({todo = {}, delFunc, ingFunc, urgentFunc}) => {
   // 한개의 todo 구성(todo + 버튼 2개)
   const { id, text } = todo;

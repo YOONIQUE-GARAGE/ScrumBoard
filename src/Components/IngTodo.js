@@ -1,5 +1,5 @@
 import React from 'react';
-import './Ing.css'
+import './Lists.css';
 
 const ingTodo = ({ing, delFunc, urgentFunc, testFunc}) => {
   console.log({ing});

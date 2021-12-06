@@ -1,0 +1,4 @@
+li > div.todo, li > div.urgent, li > div.test, li > div.ing {
+  display: inline-block;
+}
+
